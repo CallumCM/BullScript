@@ -133,7 +133,7 @@ class CompilerFunctions:
 				i += 1
 			func = Dicts.func.get(tokens[token].value, None)
 			if func == None: tokens.append(Token.Token("ERR", Error.UndefinedFunctionError(tokens[token].value)))
-			
+			else: 
 		elif tokens[token + 1].type == "EQUALS":
 			return [tokens, token, reEval]
 		elif var != None:

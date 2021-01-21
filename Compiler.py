@@ -27,7 +27,7 @@ class Compiler:
 			elif tokens[token].type == "EQUALS": v=funcs.CompilerFunctions.equals(tokens, token)
 			elif tokens[token].type == "OUT": v=funcs.CompilerFunctions.out(tokens, token)
 			elif tokens[token].type == "STR": v=funcs.CompilerFunctions.str(tokens, token)
-			elif tokens[token].type=="NEWLINE"and(reEval or v[2]):break
+			elif tokens[token].type == "NEWLINE" and reEval: break
 			tokens = v[0]; token = v[1]; reEval = reEval or v[2]
 			token += 1
 		return [tokens, reEval]

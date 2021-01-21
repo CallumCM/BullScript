@@ -4,4 +4,5 @@ out testB
 def testC() {
 	out test
 }
+testC()
 out "§9Hi"
